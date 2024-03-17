@@ -36,7 +36,7 @@ img {
 .container {
     display: flex;
     flex-direction: column;
-    width: 1158px;
+    max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -87,7 +87,8 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link.current {
+.link.current,
+.link-mobile.current-mobile {
     color: #404bbf;
 }
 
@@ -369,7 +370,13 @@ footer .logo {
 
 .link:hover,
 .link:active,
-.link:focus {
+.link:focus,
+.link-mobile:hover,
+.link-mobile:active,
+.link-mobile:focus,
+.address-mobile .link-mobile:hover,
+.address-mobile .link-mobile:active,
+.address-mobile .link-mobile:focus {
     color: #404bbf;
 }
 
@@ -420,7 +427,7 @@ address .link {
     color: #ffffff;
     cursor: pointer;
 
-    padding: 16px 32px;
+    padding: 8px 24px;
     border-radius: 4px;
     display: block;
     min-width: 165px;
@@ -551,7 +558,8 @@ address .link {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn {
+.close-btn,
+.close-btn-mobile {
     width: 24px;
     height: 24px;
     background-color: #e7e9fc;
@@ -575,13 +583,17 @@ address .link {
 }
 
 .close-btn:hover,
-.close-btn:focus {
+.close-btn:focus,
+.close-btn-mobile:hover,
+.close-btn-mobile:focus {
     background-color: #404bbf;
     border: none;
 }
 
 .close-btn:hover .close-btn_icon,
-.close-btn:focus .close-btn_icon {
+.close-btn:focus .close-btn_icon,
+.close-btn-mobile:hover .close-btn_icon,
+.close-btn-mobile:focus .close-btn_icon {
     fill: #ffffff;
 }
 
@@ -762,4 +774,234 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 .send-btn:hover,
 .send-btn:focus {
     background-color: #404bbf;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    fill: #2f2f37;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.close-btn-mobile {
+    background-color: #ffffff;
+    border: 1px solid #e7e9fc;
+}
+
+.nav-mobile {
+    padding-left: 16px;
+    padding-top: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.link-mobile {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-mobile {
+    margin-bottom: 48px;
+    padding-left: 16px;
+}
+
+.address-mobile .link-mobile {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.mobile-menu .team-icons-container {
+    gap: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding: 72px 0;
+    }
+
+    .hero-header {
+        font-size: 36px;
+        padding: 0 52px;
+    }
+
+    .hero .container {
+        width: auto;
+        gap: 72px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+        padding: 16px 0;
+    }
+
+    .address-list {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .benefits-list {
+        flex-direction: column;
+        gap: 72px;
+    }
+
+    .benefits {
+        padding: 96px 0;
+    }
+
+    .benefits .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .benefits-card {
+        width: auto;
+    }
+
+    .benefits-icons {
+        display: none;
+    }
+
+    .benefits .section-subheader {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .benefits .article {
+        font-weight: 500;
+    }
+
+    .our-team {
+        padding: 96px 0;
+    }
+
+    .our-team .container {
+        width: auto;
+    }
+
+    .team-list {
+        flex-direction: column;
+        gap: 72px;
+    }
+
+    .team-card {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .portfolio {
+        padding: 96px 0;
+    }
+
+    .portfolio .container {
+        width: auto;
+        align-items: center;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .portfolio-card {
+        width: auto;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .footer {
+        padding: 96px 0;
+    }
+
+    .footer .container {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 72px;
+    }
+
+    .footer-text {
+        margin: 0;
+    }
+
+    .footer .logo {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .socials-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .sub-btn {
+        max-width: 165px;
+    }
 }
