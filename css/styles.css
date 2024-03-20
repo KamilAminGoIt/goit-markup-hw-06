@@ -25,6 +25,7 @@ ul {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 /* MAIN STYLES */
@@ -50,6 +51,7 @@ img {
 .header .container {
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav {
@@ -303,7 +305,6 @@ img {
 }
 
 .footer .container {
-    display: flex;
     flex-direction: row;
     align-items: baseline;
 }
@@ -535,11 +536,11 @@ address .link {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .is-open {
+.backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-} */
+}
 
 .modal-window {
     width: 408px;
@@ -788,16 +789,24 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 .mobile-menu {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
+    padding: 72px 16px 40px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translateX(100%);
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0%);
 }
 
 .close-btn-mobile {
@@ -806,8 +815,6 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 }
 
 .nav-mobile {
-    padding-left: 16px;
-    padding-top: 72px;
     display: flex;
     flex-direction: column;
 }
@@ -834,13 +841,19 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 
 .address-mobile {
     margin-bottom: 48px;
-    padding-left: 16px;
+}
+
+.address-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .address-mobile .link-mobile {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 20px;
+    font-style: normal;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
@@ -850,9 +863,10 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
     gap: 40px;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (width < 768px) {
     .container {
         padding: 0 16px;
+        max-width: 320px;
     }
 
     .hero {
@@ -865,7 +879,6 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
     }
 
     .hero .container {
-        width: auto;
         gap: 72px;
     }
 
@@ -914,6 +927,7 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
         text-align: center;
         font-size: 36px;
         font-weight: 700;
+        line-height: 1.1;
     }
 
     .benefits .article {
@@ -922,10 +936,6 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 
     .our-team {
         padding: 96px 0;
-    }
-
-    .our-team .container {
-        width: auto;
     }
 
     .team-list {
@@ -943,7 +953,6 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
     }
 
     .portfolio .container {
-        width: auto;
         align-items: center;
     }
 
@@ -963,7 +972,6 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
     }
 
     .footer .container {
-        width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1003,5 +1011,173 @@ input[type="checkbox"]:checked + .privacy-label .privacy-checkbox {
 
     .sub-btn {
         max-width: 165px;
+    }
+}
+
+@media (768px <= width < 1158px) {
+    .container {
+        max-width: 768px;
+        padding: 0 16px;
+    }
+
+    .nav .logo {
+        margin-right: 120px;
+    }
+
+    .address {
+        padding: 16px 0 16px;
+    }
+
+    .address-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .address .link {
+        font-size: 12px;
+        line-height: 1.16;
+        padding: 0;
+    }
+
+    .hero {
+        padding: 112px 0;
+    }
+
+    .hero .container {
+        gap: 36px;
+    }
+
+    .benefits {
+        padding: 96px 0;
+    }
+
+    .benefits-icons {
+        display: none;
+    }
+
+    .benefits-list {
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
+    .benefits .section-subheader {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+    }
+
+    .benefits .article {
+        font-weight: 500;
+    }
+
+    .benefits-card {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .our-team {
+        padding: 96px 0;
+    }
+
+    .team-list {
+        flex-wrap: wrap;
+        gap: 64px 24px;
+    }
+
+    .team-card {
+        width: auto;
+    }
+
+    .our-team .section-subheader {
+        line-height: 1.2;
+    }
+
+    .portfolio {
+        padding: 96px 0;
+    }
+
+    .portfolio-list {
+        gap: 72px 24px;
+    }
+
+    .portfolio-card {
+        width: auto;
+    }
+
+    .footer {
+        padding: 96px 0;
+    }
+
+    .footer .container {
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        justify-content: center;
+    }
+
+    .footer-text {
+        margin: 0;
+    }
+
+    .form-container {
+        margin: 0;
+    }
+}
+
+@media (width < 768px) and (resolution < 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image-mobile.jpg);
+    }
+}
+
+@media (width < 768px) and (resolution >= 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image-mobile2x.jpg);
+    }
+}
+
+@media (768px <= width < 1158px) and (resolution < 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image-tablet.jpg);
+    }
+}
+
+@media (768px <= width < 1158px) and (resolution >= 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image-tablet2x.jpg);
+    }
+}
+
+@media (width >= 1158px) and (resolution < 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image.jpg);
+    }
+}
+
+@media (width >= 1158px) and (resolution >= 192dpi) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-image2x.jpg);
     }
 }

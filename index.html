@@ -222,6 +222,10 @@
                     <ul class="team-list">
                         <li class="team-card">
                             <img
+                                srcset="
+                                    ./images/mark-guerrero.jpg,
+                                    ./images/mark-guerrero2x.jpg 2x
+                                "
                                 src="./images/mark-guerrero.jpg"
                                 alt="portrait of Mark Guerrero"
                                 width="264"
@@ -288,6 +292,10 @@
                         </li>
                         <li class="team-card">
                             <img
+                                srcset="
+                                    ./images/tom-ford.jpg,
+                                    ./images/tom-ford2x.jpg 2x
+                                "
                                 src="./images/tom-ford.jpg"
                                 alt="portrait of Tom Ford"
                                 width="264"
@@ -354,6 +362,10 @@
                         </li>
                         <li class="team-card">
                             <img
+                                srcset="
+                                    ./images/camila-garcia.jpg,
+                                    ./images/camila-garcia2x.jpg 2x
+                                "
                                 src="./images/camila-garcia.jpg"
                                 alt="portrait of Camila Garcia"
                                 width="264"
@@ -420,6 +432,10 @@
                         </li>
                         <li class="team-card">
                             <img
+                                srcset="
+                                    ./images/daniel-wilson.jpg,
+                                    ./images/daniel-wilson2x.jpg 2x
+                                "
                                 src="./images/daniel-wilson.jpg"
                                 alt="portrait of Daniel Wilson"
                                 width="264"
@@ -494,12 +510,32 @@
                     <ul class="portfolio-list">
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/banking-app.jpg"
-                                    alt="application screen-shot"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/banking-app-mobile.jpg,
+                                            ./images/banking-app-mobile2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/banking-app-tablet.jpg,
+                                            ./images/banking-app-tablet2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/banking-app.jpg,
+                                            ./images/banking-app2x.jpg 2x
+                                        " />
+
+                                    <img
+                                        src="./images/banking-app.jpg"
+                                        alt="application screen-shot"
+                                        width="100%"
+                                        height="auto"
+                                /></picture>
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -515,12 +551,37 @@
 
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/cashless-payment.jpg"
-                                    alt="application screen-shot"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/cashless-payment-mobile.jpg,
+                                            ./images/cashless-payment-mobile2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/cashless-payment-tablet.jpg,
+                                            ./images/cashless-payment-tablet2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/cashless-payment.jpg,
+                                            ./images/cashless-payment2x.jpg 2x
+                                        "
+                                    />
+
+                                    <img
+                                        src="./images/cashless-payment.jpg"
+                                        alt="application screen-shot"
+                                        width="100%"
+                                        height="auto"
+                                    />
+                                </picture>
+
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -537,12 +598,35 @@
                         </li>
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/meditation-app.jpg"
-                                    alt="open laptop with app running"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/meditation-app-mobile.jpg,
+                                            ./images/meditation-app-mobile2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/meditation-app-tablet.jpg,
+                                            ./images/meditation-app-tablet2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/meditation-app.jpg,
+                                            ./images/meditation-app2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/meditation-app.jpg"
+                                        alt="open laptop with app running"
+                                        width="100%"
+                                        height="auto"
+                                    />
+                                </picture>
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -559,12 +643,35 @@
                         </li>
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/taxi-service.jpg"
-                                    alt="car"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/taxi-service-mobile.jpg,
+                                            ./images/taxi-service-mobile2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/taxi-service-tablet.jpg,
+                                            ./images/taxi-service-tablet2x.jpg 2x
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/taxi-service.jpg,
+                                            ./images/taxi-service2x.jpg 2x
+                                        "
+                                    />
+                                    <img
+                                        src="./images/taxi-service.jpg"
+                                        alt="car"
+                                        width="100%"
+                                        height="auto"
+                                    />
+                                </picture>
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -579,12 +686,31 @@
                         </li>
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/screen-illustrations.jpg"
-                                    alt="application screen-shot"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/screen-illustrations-mobile.jpg,
+                                            ./images/screen-illustrations-mobile2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/screen-illustrations-tablet.jpg,
+                                            ./images/screen-illustrations-tablet2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/screen-illustrations.jpg,
+                                            ./images/screen-illustrations2x.jpg 2x
+                                        " />
+                                    <img
+                                        src="./images/screen-illustrations.jpg"
+                                        alt="application screen-shot"
+                                        width="100%"
+                                        height="auto"
+                                /></picture>
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -601,12 +727,31 @@
                         </li>
                         <li class="portfolio-card">
                             <div class="protfolio-card-container-app">
-                                <img
-                                    src="./images/online-courses.jpg"
-                                    alt="woman smiling"
-                                    width="360"
-                                    height="300"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.9px)"
+                                        srcset="
+                                            ./images/online-courses-mobile.jpg,
+                                            ./images/online-courses-mobile2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(max-width: 1157.9px)"
+                                        srcset="
+                                            ./images/online-courses-tablet.jpg,
+                                            ./images/online-courses-tablet2x.jpg 2x
+                                        " />
+                                    <source
+                                        media="(min-width: 1158px)"
+                                        srcset="
+                                            ./images/online-courses.jpg,
+                                            ./images/online-courses2x.jpg 2x
+                                        " />
+                                    <img
+                                        src="./images/online-courses.jpg"
+                                        alt="woman smiling"
+                                        width="100%"
+                                        height="auto"
+                                /></picture>
                                 <p class="portfolio-card-container-app-article">
                                     14 Stylish and User-Friendly App Design
                                     Concepts · Task Manager App · Calorie
@@ -707,7 +852,7 @@
             </div>
         </footer>
 
-        <div class="backdrop is-open">
+        <div class="backdrop">
             <div class="modal-window">
                 <button class="close-btn" type="button">
                     <svg width="8" height="8" class="close-btn_icon">
